@@ -7,4 +7,4 @@ module "oci-defined-tag" {
   region                    = var.region
   fingerprint               = var.fingerprint
   tag_namespace_name        = "defined_tag_oci_prod"
-
+}
