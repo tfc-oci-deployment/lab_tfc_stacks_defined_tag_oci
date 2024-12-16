@@ -15,7 +15,7 @@ component "defined_tag_oci_prod" {
 component "defined_tag_oci_test" {
   for_each = var.regions
 
-  source = "defined_tag_oci_test"
+  source = "./defined_tag_oci_test"
 
   inputs = {
     region = var.regions
