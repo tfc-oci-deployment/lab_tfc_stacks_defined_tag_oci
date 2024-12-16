@@ -1,5 +1,5 @@
 module "oci-defined-tag" {
-  source                    = "github.com/fc-terraform-code/tfc-oci-defined-tags-module"
+  source                    = "github.com/fc-terraform-code/tfc-stack-oci-defined-tags-module"
   tenancy_ocid              = var.tenancy_ocid
   user_ocid                 = var.user_ocid
   private_key               = var.private_key
