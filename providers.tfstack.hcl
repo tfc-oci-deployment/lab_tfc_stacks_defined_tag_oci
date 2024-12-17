@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 
 required_providers {
-  aws = {
+  oci = {
     source  = "hashicorp/oci"
     #version = "~> 5.7.0"
   }
