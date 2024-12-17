@@ -3,8 +3,8 @@
 
 required_providers {
   aws = {
-    source  = "hashicorp/aws"
-    version = "~> 5.7.0"
+    source  = "hashicorp/oci"
+    #version = "~> 5.7.0"
   }
 
   random = {
@@ -23,20 +23,15 @@ required_providers {
   }
 }
 
-provider "aws" "configurations" {
+provider "oci" "configurations" {
   for_each = var.regions
 
   config {
     region = each.value
-
-    assume_role_with_web_identity {
-      role_arn           = var.role_arn
-      web_identity_token = var.identity_token
-    }
-
-    default_tags {
-      tags = var.default_tags
-    }
+    tenancy_ocid       = each.value
+    user_ocid          = each.value
+    fingerprint        = each.value
+    private_key        = each.value
   }
 }
 
