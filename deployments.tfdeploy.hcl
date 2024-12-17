@@ -8,7 +8,7 @@ deployment "development" {
     #role_arn       = "<YOUR_ROLE_ARN>"
     #identity_token = identity_token.aws.jwt
     default_tags   = { stacks-preview-example = "lambda-component-expansion-stack" }
-    region           = each.value
+    region           = "us-ashburn-1"
     tenancy_ocid     = var.tenancy_ocid
     user_ocid        = var.user_ocid
     private_key      = var.private_key
@@ -23,7 +23,7 @@ deployment "production" {
     #role_arn       = "<YOUR_ROLE_ARN>"
     #identity_token = identity_token.aws.jwt
     default_tags   = { stacks-preview-example = "lambda-component-expansion-stack" }
-    region           = each.value
+    region           = "us-ashburn-1"
     tenancy_ocid     = var.tenancy_ocid
     user_ocid        = var.user_ocid
     private_key      = var.private_key
