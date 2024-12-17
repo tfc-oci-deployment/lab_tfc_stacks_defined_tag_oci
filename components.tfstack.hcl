@@ -4,7 +4,12 @@ component "defined_tag_oci_prod" {
   source = "./defined_tag_oci_prod"
 
   inputs = {
-    region = each.value
+    region           = each.value
+    tenancy_ocid     = var.tenancy_ocid
+    user_ocid        = var.user_ocid
+    private_key      = var.private_key
+    compartment_ocid = var.compartment_ocid
+    fingerprint      = var.fingerprint
   }
 
   providers = {
@@ -18,7 +23,12 @@ component "defined_tag_oci_test" {
   source = "./defined_tag_oci_test"
 
   inputs = {
-    region = var.regions
+    region           = each.value
+    tenancy_ocid     = var.tenancy_ocid
+    user_ocid        = var.user_ocid
+    private_key      = var.private_key
+    compartment_ocid = var.compartment_ocid
+    fingerprint      = var.fingerprint
   }
 
   providers = {
