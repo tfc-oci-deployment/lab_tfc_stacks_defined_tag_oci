@@ -21,12 +21,29 @@ variable "default_tags" {
 }
 
 
-variable "tenancy_ocid" {}
-variable "user_ocid" {}
-variable "private_key" {}
-variable "compartment_ocid" {}
-variable "region" {}
-variable "fingerprint" {}
+variable "tenancy_ocid" {
+  type    = string
+}
+
+variable "user_ocid" {
+  type    = string
+}
+
+variable "private_key" {
+  type    = string
+}
+
+variable "compartment_ocid" {
+  type    = string
+}
+
+variable "region" {
+  type    = string
+}
+
+variable "fingerprint" {
+  type    = string
+}
 
 variable "tag_namespace_name" {
   type    = string
