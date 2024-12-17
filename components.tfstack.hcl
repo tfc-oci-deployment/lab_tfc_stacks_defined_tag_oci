@@ -32,6 +32,6 @@ component "defined_tag_oci_test" {
   }
 
   providers = {
-    aws = provider.aws.configurations[each.value]
+    oci = provider.oci.configurations[each.value]
   }
 }
