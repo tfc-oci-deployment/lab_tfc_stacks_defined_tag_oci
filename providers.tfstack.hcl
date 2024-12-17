@@ -28,10 +28,10 @@ provider "oci" "configurations" {
 
   config {
     region = each.value
-    tenancy_ocid       = each.value
-    user_ocid          = each.value
-    fingerprint        = each.value
-    private_key        = each.value
+    tenancy_ocid       = var.tenancy_ocid
+    user_ocid          = var.user_ocid
+    fingerprint        = var.fingerprint
+    private_key        = var.private_key
   }
 }
 
